@@ -1,0 +1,38 @@
+@use '../../mixins/mixins.scss';
+.pagination {
+    // mixins flexbox
+    @include mixins.flex(flex,center,center);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+    ul{
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    li {
+        display: inline;
+    }
+
+    li span{
+        
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        cursor: pointer;
+        background: url('../../images/fondo_card.jpeg');
+        color: #fff;
+        border-radius: 10px;
+        margin: 4px;
+        &:hover{
+            transform: scale(1.2);
+        }
+        
+        
+    }
+}

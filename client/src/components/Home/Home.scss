@@ -1,0 +1,113 @@
+@use '../../mixins/mixins.scss';
+.ctn{
+
+.home{
+    background: url('https://www.wallpaperuse.com/wallp/45-450607_m.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    width: 100%;
+    min-height: 100vh;
+    
+    .type{
+        color: #fff;
+        // mixinx flexbox
+        @include mixins.flex(flex,center,center);
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .cards{
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+        margin-bottom: 10px;
+        .grid{
+            display: grid;
+            margin-top:30px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media(max-width: 1000px){
+                grid-template-columns: 1fr 1fr; 
+            }
+            
+            @media (max-width: 700px){
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .filter{
+        @include mixins.flex(flex,center,center);
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        span{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 80px 5px 0 5px;
+            color: #fff;
+        }
+
+        select{
+            border-radius: 10px;
+            padding: 5px;
+            background: url('../../images/fondo_card.jpeg');
+            font-family: 'Acme', sans-serif;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }     
+        .selects{
+            margin-top: 80px;
+            color: #fff;
+            border: none;
+            border-bottom: 1px solid #000;
+            margin-right: 5px;
+            margin-left: 5px;
+            outline: 0px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Georama', sans-serif;
+            
+            
+            option{
+                font-weight: bold;
+                background: #6189aa;
+                border: none;
+                border-radius: 100px;
+                font-family: 'Acme', sans-serif;
+            }
+            
+           
+        }
+
+        .selects-location{
+            width: 180px;
+        }
+        .search{
+            input{
+                margin-top: 80px;
+                background: url('../../images/fondo_card.jpeg');
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                border: none;
+                font-size: 18px;
+                width:100px;
+                border-bottom: 1px solid #000;
+                padding: 5px;
+                border-radius: 10px;
+                margin-left: 5px;
+                outline: none;
+                color: #fff;
+                font-weight: bold;
+                &::placeholder{
+                    color: #fff
+                }
+            }
+        }
+    }
+}
+}

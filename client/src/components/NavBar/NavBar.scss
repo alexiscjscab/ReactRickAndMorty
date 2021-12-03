@@ -1,0 +1,43 @@
+@use '../../mixins/mixins.scss';
+
+.nav{   
+    // mixins flexbox
+    @include mixins.flex(flex,center,space-between);
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    flex-direction: row;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    position:fixed;
+    top: 0;
+    height:70px;
+    background: rgba(30,30,30,0.122);
+    
+    .logo{
+        margin-left: 10px;
+        img{
+            width: 140px;
+            height: 60px
+        
+        }
+    }
+    .link{
+        // mixins flexbox
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 10px;
+        p a{
+            margin:10px;
+            text-decoration: none;
+            color: #fff;
+            &:hover{
+                color: #4DAFEC;
+                cursor:pointer
+            }
+        }
+    }
+
+}
